@@ -1,0 +1,14 @@
+{
+  "name": "6-order-summary-component",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Challange-6",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "author": "Aliya",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.80.3"
+  }
+}

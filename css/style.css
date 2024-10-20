@@ -1,0 +1,150 @@
+:root {
+  --primary-color: hsl(245, 75%, 52%);
+  --card-bg-color: hsl(225, 100%, 98%);
+  --plan-bg-color: hsl(225, 100%, 94%);
+  --text-color: hsl(224, 23%, 55%);
+  --heading-color: hsl(223, 47%, 23%);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  min-height: 100vh;
+  position: relative;
+  background: url("../images/pattern-background-desktop.svg") no-repeat;
+}
+@media only screen and (max-width: 25em) {
+  body {
+    background: url("../images/pattern-background-mobile.svg") no-repeat;
+  }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(245, 75%, 52%);
+}
+
+.card {
+  max-width: 35rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--card-bg-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 31.25em) {
+  .card {
+    width: 100%;
+  }
+}
+.card__img {
+  width: 100%;
+  display: block;
+}
+.card__details {
+  padding: 3rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .card__details {
+    padding: 2.5rem;
+  }
+}
+.card__details > * {
+  margin-bottom: 2rem;
+}
+.card__header--primary-heading {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+.card__header--description {
+  color: var(--text-color);
+  font-size: 1.6rem;
+}
+.card__plan {
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 1rem 1.5rem;
+  border-radius: 0.8rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  background-color: rgba(224, 232, 255, 0.342);
+}
+.card__plan--icon {
+  height: 4rem;
+}
+.card__plan--description__tertiary-heading {
+  font-weight: 700;
+  color: var(--heading-color);
+}
+.card__plan--link {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-left: auto;
+}
+.card__plan--link:hover,
+.card__plan--link :active {
+  text-decoration: none;
+  color: rgba(93, 72, 252, 0.785);
+}
+.card__cta--payment {
+  width: 100%;
+  border-radius: 0.8rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--card-bg-color);
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 1.2rem;
+  box-shadow: 0px 10px 10px 3px rgba(184, 176, 249, 0.493);
+}
+.card__cta--payment:hover {
+  background-color: rgba(93, 72, 252, 0.785);
+}
+.card__cta--cancle {
+  color: hsl(224, 23%, 55%);
+}
+.card__cta--cancle:link,
+.card__cta--cancle :visited {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.card__cta--cancle:hover,
+.card__cta--cancle :active {
+  color: var(--heading-color);
+}
+
+/*# sourceMappingURL=style.css.map */

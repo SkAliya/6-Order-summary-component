@@ -1,0 +1,101 @@
+@use "../sass/base.scss" as var1;
+
+.card {
+  max-width: 35rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--card-bg-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media only screen and (max-width: var1.$bp-smaller) {
+    width: 100%;
+  }
+  &__img {
+    width: 100%;
+    display: block;
+  }
+  &__details {
+    padding: 3rem;
+    @media only screen and (max-width: var1.$bp-smaller) {
+      padding: 2.5rem;
+    }
+  }
+  &__details > * {
+    margin-bottom: 2rem;
+  }
+  &__header {
+    &--primary-heading {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--heading-color);
+      margin-bottom: 1rem;
+    }
+    &--description {
+      color: var(--text-color);
+      font-size: 1.6rem;
+    }
+  }
+  &__plan {
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    border-radius: 0.8rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    background-color: rgba(224, 232, 255, 0.342);
+    &--icon {
+      height: 4rem;
+    }
+    &--description {
+      &__tertiary-heading {
+        font-weight: 700;
+        color: var(--heading-color);
+      }
+    }
+
+    &--link {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-left: auto;
+      &:hover,
+      :active {
+        text-decoration: none;
+        color: rgba(93, 72, 252, 0.785);
+      }
+    }
+  }
+
+  &__cta {
+    &--payment {
+      width: 100%;
+      border-radius: 0.8rem;
+      border: none;
+      background-color: var(--primary-color);
+      color: var(--card-bg-color);
+      font-weight: 700;
+      font-size: 1.4rem;
+      padding: 1.2rem;
+      box-shadow: 0px 10px 10px 3px rgba(184, 176, 249, 0.493);
+      &:hover {
+        background-color: rgba(93, 72, 252, 0.785);
+      }
+    }
+    &--cancle {
+      color: hsl(224, 23%, 55%);
+      &:link,
+      :visited {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+      &:hover,
+      :active {
+        color: var(--heading-color);
+      }
+    }
+  }
+}
